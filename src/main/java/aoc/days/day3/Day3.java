@@ -49,12 +49,12 @@ public class Day3 extends AbstractDay {
             }
 
             String filterCriteria = null;
+            List<Row> summary = getSummary(filtered);
+
             if (rating.equals("oxygen")) {
-                List<Row> summary = getSummary(filtered);
                 filterCriteria = getMostCommonBits(summary);
             }
             if (rating.equals("co2")) {
-                List<Row> summary = getSummary(filtered);
                 filterCriteria = getLeastCommonBits(summary);
             }
 
